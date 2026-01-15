@@ -29,9 +29,9 @@ for item in yaml_data['item']:
     xml_tree.SubElement(item_element, 'pubDate').text = item['published']
 
     enclosure = xml_tree.SubElement(item_element, 'enclosure', {
-        url: link_prefix + item['file'],
-        type: 'audio/mpeg',
-        length: item['length']
+        'url': link_prefix + item['file'],
+        'type': 'audio/mpeg',
+        'length': item['length']
     })
 
 output_tree = xml_tree.ElementTree(rss_element)
