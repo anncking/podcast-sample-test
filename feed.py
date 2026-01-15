@@ -29,7 +29,7 @@ for item in yaml_data['item']:
     xml_tree.SubElement(item_element, 'pubDate').text = item['published']
 
     enclosure = xml_tree.SubElement(item_element, 'enclosure', {
-        url: link_prefix + item[file],
+        url: link_prefix + item['file'],
         type: 'audio/mpeg',
         length: item['length']
     })
